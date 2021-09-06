@@ -2,6 +2,8 @@ import React from 'react';
 import Main from './components/Main/Main'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import Card from './components/Card/Card'
+import Canciones from './components/Canciones/Canciones'
 import './App.css';
 
 
@@ -11,7 +13,12 @@ function App() {
      <Header/>  
     <Main/>
     <Footer/>
-   </div>
+    <Card/>
+      <div className = "card-container"></div>
+
+    <h3 className = "h3"> Canciones populares </h3>
+    <Canciones/> 
+    </div>
   );
 }
 
