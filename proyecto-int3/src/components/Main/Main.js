@@ -32,6 +32,11 @@ class Main extends Component {
                 <button type="button">Cargar más tarjetas</button>
                <Card/>
             </main>
+
+            {this.state.tracks.map((cancion, idx) => 
+            <Card dataCancion={cancion} key={idx} />)}
+
+
             </React.Fragment>
         )
     }   
