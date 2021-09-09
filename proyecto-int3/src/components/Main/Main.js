@@ -6,21 +6,23 @@ class Main extends Component {
     constructor(){
         super()
         this.state={
-           tracks: [],
+           albumes: [],
+           albumesIniciales: [],
 
         }
     }
 
     componentDidMount(){
         console.log( 'montado')
-        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?limit=10';
+        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=10';
 //guardar numero del enpdpoint en el estado, asi cada vez que carga el load more, ese estado pasa de 10 a 20, y asi 
         fetch(url)
         .then (response => response.json())
         .then (data => {
             console.log(data)
             this.setState({
-                tracks: data.data 
+                albumes: data.data, 
+                albumesIniciales: data.data,
             })
         }).catch(error=> console.log(error))
     }
@@ -33,8 +35,8 @@ class Main extends Component {
              
             </main>
 
-            {this.state.tracks.map((cancion, idx) => 
-            <Card dataCancion={cancion} key={cancion + idx} />)}
+            {this.state.albumes.map((album, idx) => 
+            <Card dataAlbum={album} key={album.name + idx} />)}
 
 
             </React.Fragment>
