@@ -26,6 +26,15 @@ class Main extends Component {
         }).catch(error=> console.log(error))
     }
 
+    deleteCard(albumABorrar){
+        let albumesQueQuedan = this.state.albumes.filter (album => 
+            album.id !== albumABorrar);
+
+            this.setState({
+                albumes: albumesQueQuedan
+            })
+    }
+
     render(){
         return(
             <React.Fragment>
@@ -35,7 +44,7 @@ class Main extends Component {
             <div className="row card-container">
             {
             this.state.albumes.map((album, idx)=> 
-            <Card dataAlbum={album} key={album.id}/>)
+            <Card dataAlbum={album} key={album.id} remove={(albumABorrar)=>this.deleteCard(albumABorrar)}/>)
             }
             </div>
 
