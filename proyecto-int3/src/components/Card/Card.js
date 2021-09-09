@@ -21,7 +21,7 @@ class CardDeezer extends Component {
                             <i className="far fa-window-close"></i>
                         </section>
                     
-                            <img src="" alt=""> </img>
+                            <p>IMAGEN VA ACA </p>
                             <h3>Título/ Nombre</h3>
                             <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
                             <section className="aditional-info">
@@ -29,7 +29,7 @@ class CardDeezer extends Component {
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
                             </section>
-                    <a href="">Ver más</a>
+                    <p>VER MAS</p>
                     </article> 
                 </section>
             )
