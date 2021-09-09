@@ -23,11 +23,11 @@ class CardDeezer extends Component {
                     
                             <img src={this.props.dataAlbum.cover_medium} alt="foto"/>
                             <h3> {this.props.dataAlbum.title} </h3>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
+                            <p class="description">{this.props.dataAlbum.position}</p>
                             <section className="aditional-info">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                                <p>{this.props.dataAlbum.artist.name}</p>
+                                <p>{this.props.dataAlbum.record_type}</p>
+                                <p>{this.props.dataAlbum.explicit_lyrics}</p>
                             </section>
                     <p>VER MAS</p>
                     </article> 
