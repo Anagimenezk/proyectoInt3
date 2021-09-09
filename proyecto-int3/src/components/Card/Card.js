@@ -21,7 +21,7 @@ class CardDeezer extends Component {
                             <i className="far fa-window-close"></i>
                         </section>
                     
-                            <img src={this.props.dataCancion.picture_medium} alt="foto"/>
+                            <img src={this.props.dataCancion.album.cover_medium} alt="foto"/>
                             <h3> {this.props.dataCancion.title} </h3>
                             <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
                             <section className="aditional-info">
