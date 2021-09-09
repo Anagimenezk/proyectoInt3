@@ -11,15 +11,15 @@ class CardDeezer extends Component {
 
     render(){
         return (
-            <section className="card-container">
+            <section className="album-card" >
                     <article>
                         <section class="navigation">
                             <div>
                                 <i className="fas fa-chevron-left"></i>
                                 <i className="fas fa-chevron-right"></i>
                             </div>
-                            <i className="far fa-window-close"></i>
-                        <div className="album-card">
+                            <i className="far fa-window-close"> Borrar </i>
+                        <div>
                         <img src={this.props.dataAlbum.cover_medium} alt="foto"/>
                             <h3> {this.props.dataAlbum.title} </h3>
                             <p class="description">{this.props.dataAlbum.position}</p>
@@ -30,7 +30,7 @@ class CardDeezer extends Component {
                         </section>
                         <p>VER MAS</p>
                         </div>
-                        </section>
+            </section>
                     
                             
                     </article> 
