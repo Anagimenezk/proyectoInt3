@@ -34,7 +34,7 @@ class Main extends Component {
             </main>
 
             {this.state.tracks.map((cancion, idx) => 
-            <Card dataCancion={cancion} key={idx} />)}
+            <Card dataCancion={cancion} key={cancion + idx} />)}
 
 
             </React.Fragment>
