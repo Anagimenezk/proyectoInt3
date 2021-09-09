@@ -33,12 +33,14 @@ class Main extends Component {
             <main>
                 <button type="button">Cargar más tarjetas</button>
              
-            </main>
-
+            <div className="row card-container">
             {this.state.albumes.map((album, idx) => 
             <Card dataAlbum={album} key={album.name + idx} />)}
+            </div>
 
+            
 
+            </main>
             </React.Fragment>
         )
     }   
