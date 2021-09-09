@@ -13,7 +13,7 @@ class Main extends Component {
     }
 
     componentDidMount(){
-        let url = 'https://thingproxy.freeboard.io/fetch/ https://api.deezer.com/chart/0/albums&top?limit=10';
+        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=10';
 //guardar numero del enpdpoint en el estado, asi cada vez que carga el load more, ese estado pasa de 10 a 20, y asi 
         fetch(url)
         .then (response => response.json())
@@ -33,8 +33,10 @@ class Main extends Component {
                 <button type="button">Cargar más tarjetas</button>
              
             <div className="row card-container">
-            {this.state.albumes.map((album, idx) => 
-            <Card dataAlbum={album} key={album.name + idx} />)}
+            {
+            this.state.albumes.map((album, idx)=> 
+            <Card dataAlbum={album} key={album.name + idx}/>)
+            }
             </div>
 
             
