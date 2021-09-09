@@ -35,7 +35,7 @@ class Main extends Component {
             <div className="row card-container">
             {
             this.state.albumes.map((album, idx)=> 
-            <Card dataAlbum={album} key={album.name + idx}/>)
+            <Card dataAlbum={album} key={album.id}/>)
             }
             </div>
 
