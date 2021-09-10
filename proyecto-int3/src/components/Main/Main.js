@@ -8,6 +8,8 @@ class Main extends Component {
         this.state={
            albumes: [],
            albumesIniciales: [],
+           isLoaded: false, 
+           nextUrl:'',
 
         }
     }
@@ -22,6 +24,7 @@ class Main extends Component {
             this.setState({
                 albumes: data.data, 
                 albumesIniciales: data.data,
+                isLoaded: true,
             })
         }).catch(error=> console.log(error))
     }
@@ -35,14 +38,19 @@ class Main extends Component {
             })
     }
 
+   
+   
+
     render(){
         return(
             <React.Fragment>
             <main>
-                <button type="button">Cargar más tarjetas</button>
+                <button type="button">Cargar más tarjetas</button>   
              
             <div className="row card-container">
             {
+                this.state.isLoaded === false ?
+                <p>Cargando...</p> :
             this.state.albumes.map((album, idx)=> 
             <Card dataAlbum={album} key={album.id} remove={(albumABorrar)=>this.deleteCard(albumABorrar)}/>)
             }

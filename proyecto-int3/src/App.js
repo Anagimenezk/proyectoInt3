@@ -5,10 +5,11 @@ import Footer from './components/Footer/Footer'
 import './App.css';
 
 
+
 function App() {
   return (
    <div className="App">
-     <Header/>  
+     <Header filtrarAlbumes={(textoAFiltrar)=> this.filtrarAlbumes(textoAFiltrar)}/>  
     <Main/>
     <Footer/>
       <div className = "card-container"></div>

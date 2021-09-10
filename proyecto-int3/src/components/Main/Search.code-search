@@ -1,0 +1,7 @@
+# Query: CardDeezer
+
+2 resultados - 1 archivo
+
+~/Desktop/UDESA/2do Año/Prog III/Proyecto/proyectoInt3/proyecto-int3/src/components/Card/Card.js:
+   4: class Card extends Component {
+  39: export default Card 
