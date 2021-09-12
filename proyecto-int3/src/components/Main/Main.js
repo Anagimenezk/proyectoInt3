@@ -11,6 +11,8 @@ class Main extends Component {
            albumesIniciales: [],
            isLoaded: false, 
            nextUrl:'',
+           changeOrientation: false,
+           text: 'Cambiar orientacion',
 
         }
     }
@@ -39,7 +41,20 @@ class Main extends Component {
             })
     }
 
-   
+    changeOrientation(){
+        if(this.state.changeOrientation){
+            this.setState({
+                text: 'Orientacion columna',
+                changeOrientation: false
+            })
+        } else{
+            this.setState({
+                text:'Orientacion filas',
+                changeOrientation: true
+            })
+        }
+    }
+   //HAY ALGO QUER NO ESTA ANDANDO, NO TIRA ERRO EPRO CUANDO APRETAS NO CAMBIA LA ORIENTACION
    
 
     render(){
@@ -47,9 +62,10 @@ class Main extends Component {
             <React.Fragment>
                
             <main>
-                <button type="button">Cargar más tarjetas</button>   
+                <button type="button">Cargar más tarjetas</button>  
+                <button type="button" onclick={ ()=> this.changeOrientation()}>{this.state.text}</button> 
              
-            <div className="row card-container">
+            <div className= {`card-container ${this.state.changeOrientation ? 'column' : 'row'}`} >
             {
                 this.state.isLoaded === false ?
                 <p>Cargando...</p> :

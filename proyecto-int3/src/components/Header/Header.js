@@ -28,7 +28,7 @@ class Header extends Component {
             })
         }).catch(error=> console.log(error))
     }
-    
+
     filtrarAlbumes(textoAFiltrar){
         let albumesFiltrados = this.state.albumesIniciales.filter (album=> 
          album.title.toLowerCase().includes(textoAFiltrar.toLowerCase()));
@@ -37,7 +37,7 @@ class Header extends Component {
          albumes: albumesFiltrados
      })
     }
-
+//ESTA TERMINADO PEOR HAY ALGO QUE NO ESTA ANDANDO, IGUALMENTE NO TIRA ERROR 
     render(){
         return(
             <React.Fragment>
