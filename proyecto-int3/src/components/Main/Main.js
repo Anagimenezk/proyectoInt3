@@ -28,6 +28,7 @@ class Main extends Component {
                 albumes: data.data, 
                 albumesIniciales: data.data,
                 isLoaded: true,
+                nextUrl: data.data.next,
             })
         }).catch(error=> console.log(error))
     }
@@ -55,20 +56,22 @@ class Main extends Component {
         }
     }
    //HAY ALGO QUER NO ESTA ANDANDO, NO TIRA ERRO EPRO CUANDO APRETAS NO CAMBIA LA ORIENTACION
+   //YA LO ARREGLEEE!!
    
    addMore(){
-
-    let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=10';
-    
-    fetch(url)
+       let url = this.state.nextUrl;
+       fetch(url)
         .then (response => response.json())
         .then (data => {
         console.log(data)
         this.setState({
-            albumes: data.data, 
-            
+            albumes: this.state.albumes.concat(data.results),
+            nextUrl: data.data.next,
+
         })
-    }).catch(error=> console.log(error))
+        
+        }).catch(error=> console.log(error))
+
    }
 
     render(){
@@ -76,7 +79,7 @@ class Main extends Component {
             <React.Fragment>
                
             <main>
-                <button type="button">Cargar más tarjetas</button>  
+                <button type="button" onClick={ () => this.addMore()}>Cargar más tarjetas</button>  
                 <button type="button" onClick={ ()=> this.changeOrientation()}>{this.state.text}</button> 
              
             <div className= {`card-container ${this.state.changeOrientation ? 'column' : 'row'}`} >
