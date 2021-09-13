@@ -41,3 +41,7 @@ h4 {
 main{
     width: 100%;  
 }
+
+.card-container p {
+    font-family: 'Epilogue', sans-serif;
+}
