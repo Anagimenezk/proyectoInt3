@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Card from '../Card/Card';
 import './main.css'
+import Header from '../Header/Header';
 
 
 class Main extends Component {
@@ -29,7 +30,7 @@ class Main extends Component {
                 albumes: data.data, 
                 albumesIniciales: data.data,
                 isLoaded: true,
-                nextUrl: data.data.next,
+                resultsPerPage: this.state.resultsPerPage + 10,
             })
         }).catch(error=> console.log(error))
     }
@@ -75,9 +76,19 @@ class Main extends Component {
 
    }
 
+    filtrarAlbumes(textoAFiltrar){
+        let albumesFiltrados = this.state.albumesIniciales.filter (album=> 
+        album.title.toLowerCase().includes(textoAFiltrar.toLowerCase()));
+
+        this.setState({
+            albumes: albumesFiltrados
+        })
+    }
+
     render(){
         return(
             <React.Fragment>
+                <Header filtrarAlbumes={(textoAFiltrar)=> this.filtrarAlbumes(textoAFiltrar)}/>  
                <h4>ALBUMES POPULARES </h4>
             <main>
                 <button type="button" onClick={ () => this.addMore()}>Cargar más tarjetas</button>  
