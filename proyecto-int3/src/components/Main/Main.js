@@ -78,7 +78,7 @@ class Main extends Component {
     render(){
         return(
             <React.Fragment>
-               
+               <h4>ALBUMES POPULARES </h4>
             <main>
                 <button type="button" onClick={ () => this.addMore()}>Cargar más tarjetas</button>  
                 <button type="button" onClick={ ()=> this.changeOrientation()}>{this.state.text}</button> 
