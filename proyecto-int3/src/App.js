@@ -20,24 +20,16 @@ import './App.css';
 function App() {
   return (
    <div className="App">
-     <Header filtrarAlbumes={(textoAFiltrar)=> this.filtrarAlbumes(textoAFiltrar)}/>  
+       <Header filtrarAlbumes={(textoAFiltrar)=> this.filtrarAlbumes(textoAFiltrar)}/>  
      
-    <Main/>
-    
-    
-
-    <Footer/>
-      <div className = "card-container"></div>
+       <Main/>
+       <Footer/>
 
     </div>
 
   );
 
 }
-
-
-
-
 
 
 export default App;
