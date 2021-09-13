@@ -30,7 +30,7 @@ class Main extends Component {
                 albumes: data.data, 
                 albumesIniciales: data.data,
                 isLoaded: true,
-                resultsPerPage: this.state.resultsPerPage + 10,
+                resultsPerPage: this.state.resultsPerPage ,
             })
         }).catch(error=> console.log(error))
     }
@@ -61,14 +61,16 @@ class Main extends Component {
    //YA LO ARREGLEEE!!
    
    addMore(){
-       let url = this.state.nextUrl;
+
+       let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=' + this.state.resultsPerPage;
+       
        fetch(url)
         .then (response => response.json())
         .then (data => {
         console.log(data)
         this.setState({
-            albumes: this.state.albumes.concat(data.results),
-            nextUrl: data.data.next,
+            albumes: this.state.albumes.concat(data.data),
+            nextUrl: this.state.resultsPerPage + 10,
 
         })
         
