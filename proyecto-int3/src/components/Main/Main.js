@@ -56,6 +56,20 @@ class Main extends Component {
     }
    //HAY ALGO QUER NO ESTA ANDANDO, NO TIRA ERRO EPRO CUANDO APRETAS NO CAMBIA LA ORIENTACION
    
+   addMore(){
+
+    let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=10';
+    
+    fetch(url)
+        .then (response => response.json())
+        .then (data => {
+        console.log(data)
+        this.setState({
+            albumes: data.data, 
+            
+        })
+    }).catch(error=> console.log(error))
+   }
 
     render(){
         return(
@@ -63,7 +77,7 @@ class Main extends Component {
                
             <main>
                 <button type="button">Cargar más tarjetas</button>  
-                <button type="button" onclick={ ()=> this.changeOrientation()}>{this.state.text}</button> 
+                <button type="button" onClick={ ()=> this.changeOrientation()}>{this.state.text}</button> 
              
             <div className= {`card-container ${this.state.changeOrientation ? 'column' : 'row'}`} >
             {

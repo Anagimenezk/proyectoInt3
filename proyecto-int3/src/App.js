@@ -7,26 +7,34 @@ import './App.css';
 
 
 // por que el h3 lo habian puesto en el footer? lo cambie al header pero igual esta mal..
+//lo dejo comentado 
+
+//<div>
+    //<h3 className = "h3"> Albums populares </h3> 
+    //<Card/>
+//</div>
+//probe y se rompe, algo estoy haciendo mal, lo dejo comentado
+
 
 
 function App() {
   return (
    <div className="App">
      <Header filtrarAlbumes={(textoAFiltrar)=> this.filtrarAlbumes(textoAFiltrar)}/>  
-    
-    <h3 className = "h3"> Canciones populares </h3> 
      
     <Main/>
+    
+    
+
     <Footer/>
       <div className = "card-container"></div>
-
-    
 
     </div>
 
   );
 
 }
+
 
 
 
