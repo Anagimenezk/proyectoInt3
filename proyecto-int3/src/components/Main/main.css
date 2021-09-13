@@ -9,17 +9,18 @@
 }
 
 h4 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: bolder;
     font-size: 30px;
 }
 
 .cargartarjetas {
     margin-right: 40px;
     font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Epilogue', sans-serif;
     border-radius: 0;
-    background-color:rgba(40,41,41,0.7);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgb(26, 25, 25);
+    border: 1px solid rgba(255, 255, 255, 0.171);
     color: white;
     padding: 8px;
 }
@@ -30,9 +31,10 @@ h4 {
 
 .subtitulo {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    
 }
 
 main{
-    width: 100%;   
+    width: 100%;  
 }

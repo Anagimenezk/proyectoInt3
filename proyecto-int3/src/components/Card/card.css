@@ -1,5 +1,6 @@
 .more{
-    color: blue;
+    color: rgb(107, 87, 180);
+    text-decoration: none;
 }
 .more:hover{
     text-decoration:underline;
@@ -13,5 +14,31 @@
 }
 
 .album-card{
-    width: 30%
+    width: 30%;
+    background-color: rgba(131, 130, 130, 0.219);
+    margin-top: 40px;
+    border-radius: 2%;
+    font-family: 'Arimo', sans-serif;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.albumes {
+    margin-top: 10px;
+    font-family: 'Epilogue', sans-serif;
+}
+
+.albumes h3 {
+    font-weight: bolder;
+}
+
+.albumes img {
+    height: 300px;
 }

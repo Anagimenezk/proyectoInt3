@@ -7,8 +7,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: rgba(128, 128, 128, 0.37);
-    border-radius: 2%;
+    background-color: black;
+    border-radius: 1%;
+    padding-bottom: 40px;
 }
 
 body {

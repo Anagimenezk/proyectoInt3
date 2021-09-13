@@ -29,12 +29,14 @@ class Card extends Component {
             <section className="album-card" >
                     <article>
                         <section className="navigation">
+                        <div className="logos">
                             <div>
                                 <i className="fas fa-chevron-left"></i>
                                 <i className="fas fa-chevron-right"></i>
                             </div>
                             <i className="far fa-window-close" onClick={()=>this.props.remove(this.props.dataAlbum.id)}> </i>
-                        <div>
+                            </div>
+                        <div className="albumes">   
                         <img src={this.props.dataAlbum.cover_medium} alt="foto"/>
                             <h3> {this.props.dataAlbum.title} </h3>
                             <p className="description"> Ranking: {this.props.dataAlbum.position}</p>
