@@ -7,4 +7,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    background-color: rgba(128, 128, 128, 0.37);
+    border-radius: 2%;
 }
+
+body {
+    background-color: rgba(0, 0, 0, 0.932);
+    color: white;
+}
+

@@ -13,9 +13,9 @@ class Footer extends Component {
         return(
             <footer>
                 <ul className="team">
-                    <li>Nombre integrante 1</li>
-                    <li>Nombre integrante 2</li>
-                    <li>Nombre integrante 3</li>
+                    <li>Ana Gimenez</li>
+                    <li>Daira Sapir</li>
+                    <li>Cala Ruggeri</li>
                 </ul>
             </footer>
         )
