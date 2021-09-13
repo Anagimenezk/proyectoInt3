@@ -45,8 +45,7 @@ class Header extends Component {
             <h1>Musica</h1>
              <section>
                     <p>Ordenar ASC/ DESC</p>
-                    <i className="fas fa-th"></i>
-                    <i className="fas fa-align-justify"></i>
+                   
 
                     <div className=" card-container">
                     <form action="" onSubmit = {(event)=> this.evitarSubmit(event)} >
