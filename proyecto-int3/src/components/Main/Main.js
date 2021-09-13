@@ -13,7 +13,7 @@ class Main extends Component {
            isLoaded: false, 
            nextUrl:'',
            changeOrientation: false,
-           text: 'Cambiar orientacion',
+            text:'fa-align-justify',
            resultsPerPage: 10,
 
         }
@@ -47,12 +47,12 @@ class Main extends Component {
     changeOrientation(){
         if(this.state.changeOrientation){
             this.setState({
-                text: 'Orientacion columna',
+                text: 'fa-align-justify',
                 changeOrientation: false
             })
         } else{
             this.setState({
-                text:'Orientacion filas',
+                text:'fa-th',
                 changeOrientation: true
             })
         }
@@ -94,7 +94,7 @@ class Main extends Component {
                <h4>ALBUMES POPULARES </h4>
             <main>
                 <button type="button" onClick={ () => this.addMore()}>Cargar más tarjetas</button>  
-                <button type="button" onClick={ ()=> this.changeOrientation()}>{this.state.text}</button> 
+                <i type="button" onClick={ ()=> this.changeOrientation()} className= {`fas ${this.state.text}`}></i> 
              
             <div className= {`card-container ${this.state.changeOrientation ? 'column' : 'row'}`} >
             {
