@@ -13,12 +13,13 @@ class Main extends Component {
            nextUrl:'',
            changeOrientation: false,
            text: 'Cambiar orientacion',
+           resultsPerPage: 10,
 
         }
     }
 
     componentDidMount(){
-        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=10';
+        let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=' + this.state.resultsPerPage;
 //guardar numero del enpdpoint en el estado, asi cada vez que carga el load more, ese estado pasa de 10 a 20, y asi 
         fetch(url)
         .then (response => response.json())
