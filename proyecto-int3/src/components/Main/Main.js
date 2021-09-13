@@ -91,10 +91,13 @@ class Main extends Component {
         return(
             <React.Fragment>
                 <Header filtrarAlbumes={(textoAFiltrar)=> this.filtrarAlbumes(textoAFiltrar)}/>  
-               <h4>ALBUMES POPULARES </h4>
+               <h4> ALBUMES POPULARES </h4>
             <main>
-                <button type="button" onClick={ () => this.addMore()}>Cargar más tarjetas</button>  
+                <div className="subtitulo">
+                <button className="cargartarjetas" type="button" onClick={ () => this.addMore()}>Cargar más tarjetas</button>  
                 <i type="button" onClick={ ()=> this.changeOrientation()} className= {`fas ${this.state.text}`}></i> 
+                </div>
+             
              
             <div className= {`card-container ${this.state.changeOrientation ? 'column' : 'row'}`} >
             {

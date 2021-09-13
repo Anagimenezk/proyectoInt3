@@ -42,17 +42,17 @@ class Header extends Component {
             <React.Fragment>
               
           <header>
-            <h1>Musica</h1>
+            <h1> <i class="fas fa-record-vinyl"></i> TUNEZAP</h1>
              <section>
-                    <p>Ordenar ASC/ DESC</p>
+                    <p className="ordenar"> Ordenar ASC/DESC</p>
                    
 
-                    <div className=" card-container">
-                    <form action="" onSubmit = {(event)=> this.evitarSubmit(event)} >
-                        <input type="text" id="" placeholder="Buscar Album"  
+                    <div className="buscador">
+                    <form className = "formbuscador" action="" onSubmit = {(event)=> this.evitarSubmit(event)} >
+                        <input className = "input-text" type="text" id="" placeholder="Buscar Album"  
                         onChange={(filtro)=> this.controlarCambios(filtro)} value={this.state.filterBy}/>
                         
-                        <button type="submit"><i className="fas fa-search"></i></button>
+                        <button type="submit" className = "botonbuscador"><i className="fas fa-search"></i></button>
                     </form>
                    
                     </div>

@@ -1,6 +1,79 @@
 Header h1 {
-    color: yellowgreen;
+    color: rgb(236, 170, 236);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
-    margin-left: 150px;
+    margin-left: 100px;
+    font-size: 40px;
 }
+
+Header section {
+    border-bottom: solid rgb(236, 170, 236) 2px;
+}
+
+.buscador {
+    margin-bottom: 20px;
+
+}
+
+.buscador {
+     position: relative;
+     width: 95%;
+     background-color: rgba(40,41,41,0.7);
+     margin-left: 20px;
+     margin-right: 20px;
+     margin-top: 5px;
+     border: 0.5px solid white;
+     height: 40px;
+     padding: 5px;
+     padding-left: 10px;
+     padding-right: 10px;
+     color: white;
+     }
+
+.formbuscador{
+    justify-content: space-around;
+    }
+
+.botonbuscador{
+     background-color:rgba(40,41,41,0.7);
+     border: 1px solid rgba(255, 255, 255, 0.3);
+     color: white;
+     padding: 10px;
+     margin-left: 10px;
+     }
+  
+     .botonbuscador:hover{
+        background-color: rgba(240, 196, 203, 0.5); 
+     }
+  .buscador .icon {
+    position: absolute;
+    top: 47%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: white;
+    padding-bottom: 25px;
+  }
+  
+  .buscador .input-text {
+    width: 93%;
+    border: 0px;
+    background-color: #fff;
+    height: 20px;
+    padding: 8px 8px 8px 35px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border: white;
+    background-color: rgba(40,41,41,0.7);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+   
+  }
+  .buscador .input-text:focus {
+    width: 80%;
+    background-color:rgba(255, 191, 216, 0.856);
+  }
+
+  Header .ordenar {
+      text-align: right !important;
+      margin-right: 40px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
