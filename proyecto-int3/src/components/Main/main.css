@@ -45,3 +45,11 @@ main{
 .card-container p {
     font-family: 'Epilogue', sans-serif;
 }
+
+.cargando {
+    border: none;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-left: 600px;
+}
