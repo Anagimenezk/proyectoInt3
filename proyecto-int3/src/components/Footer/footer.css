@@ -10,6 +10,8 @@
 
 .team li {
     text-align: right;
+    margin-top: 25px;
+    margin-left: 10px;
 }
 
 Footer h3 {
