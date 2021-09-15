@@ -26,11 +26,11 @@ Header section {
     color: white;
 }
 
-.formbuscador{
+.formBuscador{
     justify-content: space-around;
 }
 
-.botonbuscador{
+.botonBuscador{
     background-color:rgba(40,41,41,0.7);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
@@ -38,7 +38,7 @@ Header section {
     margin-left: 10px;
 }
   
-.botonbuscador:hover{
+.botonBuscador:hover{
     background-color: rgba(240, 196, 203, 0.5); 
 }
 
