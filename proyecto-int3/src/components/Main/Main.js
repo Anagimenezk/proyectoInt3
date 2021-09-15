@@ -58,8 +58,7 @@ class Main extends Component {
             })
         }
     }
-   //HAY ALGO QUER NO ESTA ANDANDO, NO TIRA ERRO EPRO CUANDO APRETAS NO CAMBIA LA ORIENTACION
-   //YA LO ARREGLEEE!!
+   
    
    addMore(){
 

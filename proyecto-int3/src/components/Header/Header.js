@@ -37,7 +37,7 @@ class Header extends Component {
         }, ()=> this.props.filtrarAlbumes(this.state.filterBy))
     }
 
-//ESTA TERMINADO PEOR HAY ALGO QUE NO ESTA ANDANDO, IGUALMENTE NO TIRA ERROR 
+
     render(){
         return(
             <React.Fragment>
