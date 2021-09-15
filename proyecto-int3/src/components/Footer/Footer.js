@@ -13,7 +13,7 @@ class Footer extends Component {
         return(
             <footer>
                 <ul className="team">
-                    <h3> <i class="fas fa-record-vinyl"></i> TUNEZAP</h3>
+                    <h3> <i className="fas fa-record-vinyl"></i> TUNEZAP</h3>
                     <li>by: Ana Gimenez,</li>
                     <li>Daira Sapir</li>
                     <li>and Cala Ruggeri</li>
