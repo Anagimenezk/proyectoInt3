@@ -103,7 +103,7 @@ class Main extends Component {
             <div className= {`card-container ${this.state.changeOrientation ? 'column' : 'row'}`} >
             {
                 this.state.isLoaded === false ?
-                <iframe className="cargando" src="https://giphy.com/embed/17mNCcKU1mJlrbXodo"></iframe>:
+                <iframe title="gifCargando" className="cargando" src="https://giphy.com/embed/17mNCcKU1mJlrbXodo"></iframe>:
             this.state.albumes.map((album, idx)=> 
             <Card dataAlbum={album} key={album.id} remove={(albumABorrar)=>this.deleteCard(albumABorrar)}/>)
             }
