@@ -2,14 +2,12 @@
     list-style: none;
     display: flex;
     font-family: 'Epilogue', sans-serif;
-    text-align: right !important;
     margin-right: 55px;
-    
+    text-align: right !important;
     
 }
 
 .team li {
-    text-align: right;
     margin-top: 25px;
     margin-left: 10px;
 }
