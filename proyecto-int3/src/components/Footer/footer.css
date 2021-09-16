@@ -2,20 +2,27 @@
     list-style: none;
     display: flex;
     font-family: 'Epilogue', sans-serif;
-    margin-right: 55px;
+    margin-right: 40px;
     text-align: right !important;
+    justify-content:flex-end;
+   
     
 }
 
 .team li {
     margin-top: 25px;
-    margin-left: 10px;
+    display: flex;
 }
 
 Footer h3 {
     color: rgb(253, 191, 202);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    margin-left: 40px;
 }
 
 
