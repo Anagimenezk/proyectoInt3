@@ -1,6 +1,7 @@
 .column{
     display: flex;
     flex-direction: column;
+    
 }
 
 .row{
@@ -53,3 +54,24 @@ main{
     margin-top: 50px;
     margin-left: 600px;
 }
+
+.column .album-card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.column .albumes img{
+    display: flex;
+    align-items: flex-start;
+    margin-left: 50px;
+    margin-top: 20px;
+
+}
+
+.column h3{
+    display: flex;
+    justify-content: center;
+    
+}
+
