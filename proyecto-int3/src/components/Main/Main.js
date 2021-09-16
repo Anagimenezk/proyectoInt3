@@ -21,7 +21,7 @@ class Main extends Component {
     }
 
     componentDidMount(){
-        let url = `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums?index=1&limit=${this.state.resultsPerPage}`;
+        let url = `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&limit=${this.state.resultsPerPage}`;
 //guardar numero del enpdpoint en el estado, asi cada vez que carga el load more, ese estado pasa de 10 a 20, y asi 
         fetch(url)
         .then (response => response.json())
@@ -31,7 +31,7 @@ class Main extends Component {
                 albumes: data.data, 
                 albumesIniciales: data.data,
                 isLoaded: true,
-                resultsPerPage: this.state.resultsPerPage ,
+                resultsPerPage: this.state.resultsPerPage + 10 ,
             })
         }).catch(error=> console.log(error))
     }
@@ -62,14 +62,14 @@ class Main extends Component {
    
    addMore(){
 
-       let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums?index=1&limit=' + this.state.resultsPerPage;
+       let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&limit=' + this.state.resultsPerPage;
        
        fetch(url)
         .then (response => response.json())
         .then (data => {
         console.log(data)
         this.setState({
-            albumes: this.state.albumes.concat(data.data),
+            albumes: data.data,
             nextUrl: this.state.resultsPerPage + 10,
 
         })
