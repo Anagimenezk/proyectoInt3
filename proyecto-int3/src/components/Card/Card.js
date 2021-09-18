@@ -38,13 +38,16 @@ class Card extends Component {
                             </div>
                         <div className="albumes">   
                         <img src={this.props.dataAlbum.cover_medium} alt="foto"/>
+                            <div className="info">
                             <h3> {this.props.dataAlbum.title} </h3>
-                            <p className="description"> Ranking: {this.props.dataAlbum.position}</p>
+                                <p className="description"> Ranking: {this.props.dataAlbum.position}</p>
                         <section className= {`aditional-info ${this.state.viewMore ? 'show': 'hide'}`}>
                                 <p>{this.props.dataAlbum.artist.name}</p>
                                 <p>{this.props.dataAlbum.record_type}</p>
                         </section>
                         <p className='more' onClick={()=> this.viewMore()}>{this.state.text}</p>
+                        </div>
+
                         </div>
             </section>
                     
