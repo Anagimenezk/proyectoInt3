@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import './main.css'
 import Header from '../Header/Header';
 
-<title> CDC CLOTHING </title>
+<title> TUNEZAP </title>
 
 class Main extends Component {
     constructor(){

@@ -55,9 +55,14 @@ main{
     margin-left: 600px;
 }
 
-.column .album-card{
-    width: 100%;
+.albumes .column {
     display: flex;
+    flex-direction: row;
+}
+
+.column .album-card{
+    display: flex;
+    width: 100%;
     flex-direction: row;
 }
 
