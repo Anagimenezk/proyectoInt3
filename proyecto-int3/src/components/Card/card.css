@@ -8,10 +8,12 @@
 }
 .show{
     display:block;
+   
 }
 .hide{
     display:none
 }
+
 
 .album-card{
     width: 30%;
