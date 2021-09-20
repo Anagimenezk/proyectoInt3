@@ -12,20 +12,6 @@ class Header extends Component {
         }
     }
 
-//     componentDidMount(){
-//         let url = 'https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=10';
-// //guardar numero del enpdpoint en el estado, asi cada vez que carga el load more, ese estado pasa de 10 a 20, y asi 
-//         fetch(url)
-//         .then (response => response.json())
-//         .then (data => {
-//             console.log(data)
-//             this.setState({
-//                 albumes: data.data, 
-//                 albumesIniciales: data.data,
-//                 isLoaded: true,
-//             })
-//         }).catch(error=> console.log(error))
-//     }
     evitarSubmit(e){
         e.preventDefault();
         console.log('Evitando envio')

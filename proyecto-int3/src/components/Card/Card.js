@@ -42,9 +42,9 @@ class Card extends Component {
                             <h3> {this.props.dataAlbum.title} </h3>
                                 <p className="description"> Ranking: {this.props.dataAlbum.position}</p>
                         <section className= {`aditional-info ${this.state.viewMore ? 'show': 'hide'}`}>
-                                <div>{this.props.dataAlbum.artist.name}</div>
+                                <div>{this.props.dataAlbum.artist.name}  {this.props.dataAlbum.record_type}</div>
                              
-                                <div>{this.props.dataAlbum.record_type}</div>
+                                
                         </section>
                         <p className='more' onClick={()=> this.viewMore()}>{this.state.text}</p>
                         </div>
