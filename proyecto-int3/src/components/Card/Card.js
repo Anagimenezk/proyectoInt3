@@ -42,7 +42,10 @@ class Card extends Component {
                             <h3> {this.props.dataAlbum.title} </h3>
                                 <p className="description"> Ranking: {this.props.dataAlbum.position}</p>
                         <section className= {`aditional-info ${this.state.viewMore ? 'show': 'hide'}`}>
-                                <div>{this.props.dataAlbum.artist.name}  {this.props.dataAlbum.record_type}</div>
+                                <div> 
+                                    <p> {this.props.dataAlbum.artist.name} </p> 
+                                    <p className="masAlbum">{this.props.dataAlbum.record_type}</p>
+                                </div>
                              
                                 
                         </section>

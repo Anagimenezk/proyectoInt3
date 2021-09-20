@@ -48,3 +48,8 @@
 .albumes img {
     height: 300px;
 }
+
+.column .masAlbum {
+    display: flex;
+    justify-content: left;
+}
