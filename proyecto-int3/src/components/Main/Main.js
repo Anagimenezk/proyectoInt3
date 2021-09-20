@@ -6,23 +6,25 @@ import Header from '../Header/Header';
 <title> TUNEZAP </title>
 
 class Main extends Component {
+//configuramos el estado del componente para que pueda almacenar la info de la API 
+//luego de hacer el fetch
     constructor(){
         super()
         this.state={
            albumes: [],
            albumesIniciales: [],
            isLoaded: false, 
-           nextUrl:'',
            changeOrientation: false,
-            text:'fa-align-justify',
+           text:'fa-align-justify',
            resultsPerPage: 10,
 
         }
     }
 
     componentDidMount(){
+
         let url = `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&limit=${this.state.resultsPerPage}`;
-//guardar numero del enpdpoint en el estado, asi cada vez que carga el load more, ese estado pasa de 10 a 20, y asi 
+        
         fetch(url)
         .then (response => response.json())
         .then (data => {
@@ -35,6 +37,7 @@ class Main extends Component {
             })
         }).catch(error=> console.log(error))
     }
+
 
     deleteCard(albumABorrar){
         let albumesQueQuedan = this.state.albumes.filter (album => 
@@ -70,7 +73,7 @@ class Main extends Component {
         console.log(data)
         this.setState({
             albumes: data.data,
-            nextUrl: this.state.resultsPerPage + 10,
+            resultsPerPage: this.state.resultsPerPage + 10,
 
         })
         
